@@ -32,13 +32,13 @@ jobs:
     - name: Documentation build
       # if: ${{ github.ref == 'refs/heads/master'}}
       run: |
-        pip install sphinx>=3.1.1 sphinx-rtd-theme>=0.5.0 sphinx-autodoc-typehints numpydoc wget nbsphinx
+        pip install numpy matplotlib sphinx>=3.1.1 sphinx-rtd-theme>=0.5.0 sphinx-autodoc-typehints numpydoc wget nbsphinx
         sudo apt-get install pandoc
         sphinx-build -b html -aET docs/source docs/_build/html
         touch docs/_build/html/.nojekyll
         
     - name: Deploy to GitHub Pages
-      if: ${{ github.ref == 'refs/heads/master'}}
+      # if: ${{ github.ref == 'refs/heads/master'}}
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
