@@ -328,7 +328,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, project, project + ' Documentation',
-     [author], 1)
+     [authors], 1)
 ]
 
 
@@ -339,7 +339,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, project, project + ' Documentation',
-     author, project,
+     authors, project,
      'Documentation and best practices on how to run workflows across ASCR facilities',
      'Miscellaneous'),
 ]
@@ -360,8 +360,8 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = project
-epub_author = author
-epub_publisher = author
+epub_author = authors
+epub_publisher = authors
 epub_copyright = copyright
 
 # The basename for the epub file. It defaults to the project name.
