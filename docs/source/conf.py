@@ -44,7 +44,7 @@ for root, dirs, files in os.walk(examples_source):
 
 project = 'Cross Facility Workflows'
 copyright = '2021, ALCF, OLCF, NERSC'
-author = 'Deborah Bard, Johannes Blaschke, Bjeorn Enders, Shane Canon, Sean Wilkinson, Suhas Somnath, Mallikarjun Shankar, Tom Uram, Katie Antypas'
+authors = 'Suhas Somnath, Johannes Blaschke, Bjeorn Enders, Shane Canon, Sean Wilkinson, Deborah Bard, Mallikarjun Shankar, Tom Uram, Katie Antypas'
 
 # The short X.Y version
 version = '0.0'
