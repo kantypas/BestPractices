@@ -17,6 +17,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
 
    about
    DataManagement
+   Containers
 
 * :ref:`modindex`
 
