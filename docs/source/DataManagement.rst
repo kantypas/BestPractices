@@ -17,6 +17,8 @@ You can log into the Globus web interface with your NERSC credentials (by select
 or using many of the other supported providers listed that you can authenticate against. 
 NERSC maintains several Globus endpoints that can be activated for individual use by any NERSC user. 
 The list of endpoints are provided in the table below. 
+
+
 +----------------+---------------+------------------+
 |  Endpoint Name |  Description  | Recommended Use |
 +========================+============+==========+
@@ -33,8 +35,10 @@ The list of endpoints are provided in the table below.
 |    NERSC S3         |    Single node system with read-only access to NERSC homes     |Data transfers to / from Amazon S3|
 +------------------------+------------+----------+
 
+
 * Data can be shared at NERSC using .. _Globus Sharing: https://www.globus.org/data-sharing. Currently shared endpoints are read-only, no writing is allowed. See this page for more information. 
 * NERSC has an experimental Globus S3 endpoint that can be used to access and share content from AWS S3. See this page for more information. 
+
 
 
 OLCF
