@@ -16,7 +16,11 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: XFacilityWorkflows
 
    about
-
+   
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Data Management
    DataManagement
 
 * :ref:`modindex`
