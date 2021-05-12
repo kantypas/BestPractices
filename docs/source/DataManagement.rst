@@ -19,21 +19,22 @@ NERSC maintains several Globus endpoints that can be activated for individual us
 The list of endpoints are provided in the table below. 
 
 
-+----------------+---------------+------------------+
-|  Endpoint Name |  Description  | Recommended Use |
-+========================+============+==========+
-|  NERSC DTN  |  Multi-node, high performance transfer system | Almost all data transfers needs into & out of NERSC |
-|             | with access to all NERSC Global File  ||
-|             | systems (NGF) as well as Cori Scratch ||
-+------------------------+------------+----------+
-|   NERSC HPSS          |    Single node system connected directly to the     |  Remote transfers into & out of HPSS     |
-|                        |  NERSC HPSS tape archive||
-+------------------------+------------+----------+
-|  NERSC SHARE           |   Single node system with read-only access to      |Shared Globus endpoint|
-|                         | some NERSC file systems ||
-+------------------------+------------+----------+
-|    NERSC S3         |    Single node system with read-only access to NERSC homes     |Data transfers to / from Amazon S3|
-+------------------------+------------+----------+
++----------------+-----------------------------------------------+---------------------------+
+|  Endpoint Name |               Description                     | Recommended Use           |
++================+===============================================+===========================+
+|  NERSC DTN     | Multi-node, high performance transfer system  | Almost all data transfers |
+|                | with access to all NERSC Global File          | needs into & out of NERSC |
+|                | systems (NGF) as well as Cori Scratch         |                           |
++----------------+-----------------------------------------------+---------------------------+
+|   NERSC HPSS   | Single node system connected directly to      | Remote transfers into &   |
+|                | the NERSC HPSS tape archive                   | out of HPSS               |
++----------------+-----------------------------------------------+---------------------------+
+|  NERSC SHARE   | Single node system with read-only access to   | Shared Globus endpoint    |
+|                | some NERSC file systems                       |                           |
++----------------+-----------------------------------------------+---------------------------+
+|    NERSC S3    | Single node system with read-only             | Data transfers to  & from |
+|                | access to NERSC homes                         | Amazon S3                 |                   
++----------------+-----------------------------------------------+---------------------------+
 
 
 * Data can be shared at NERSC using .. _Globus Sharing: https://www.globus.org/data-sharing. Currently shared endpoints are read-only, no writing is allowed. See this page for more information. 
