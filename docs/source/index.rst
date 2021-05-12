@@ -17,6 +17,8 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
 
    about
 
+   DataManagement
+
 * :ref:`modindex`
 
 .. toctree::
