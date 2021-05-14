@@ -16,8 +16,11 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: XFacilityWorkflows
 
    about
-   DataManagement
-   Containers
+   data_management
+   containers
+   user_applications
+   facility_api
+   identity_management
 
 * :ref:`modindex`
 
