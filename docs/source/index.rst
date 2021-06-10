@@ -15,7 +15,6 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :maxdepth: 1
    :caption: Technologies
 
-   about
    data_management
    containers
    user_applications
@@ -28,8 +27,6 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    :caption: Use cases
 
    cctbx
-
-* :ref:`modindex`
 
 .. toctree::
    :glob:
