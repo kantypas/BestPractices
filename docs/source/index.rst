@@ -13,7 +13,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: XFacilityWorkflows
+   :caption: Technologies
 
    about
    data_management
@@ -21,6 +21,13 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    user_applications
    facility_api
    identity_management
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Use cases
+
+   cctbx
 
 * :ref:`modindex`
 
