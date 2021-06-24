@@ -10,14 +10,7 @@ recent publication <https://arxiv.org/abs/2106.11469>`_ demonstrates these
 workflows at NERSC. Critical for resiliancy is to enable failover to other
 facilities.
 
-The following figure outlines the LCLS + NERSC workflow. We improved
-portability by employing the following technologies:
-
-1. Enable data to be "sent everywhere" at short notice.
-2. Build protable containers for the data analysis software. This allows rapdi
-   re-deployment at a new site.
-3. Host workflow orchestration on Kubernetes-based microservices platforms.
-   This minimizes the amount of custom (site-local) pipeline management code.
+The following figure outlines the LCLS + NERSC workflow.
 
 .. figure:: ./assets/cctbx_workflow.png
 
@@ -37,8 +30,33 @@ portability by employing the following technologies:
 CCTBX
 -----
 
-The Crystallographic Toolbox (CCTBX)
+Data was analyzed using the `Computational Crystallographic Toolbox (CCTBX)
+<https://github.com/cctbx/cctbx_project>`_ 
 
 
 Portability
 -----------
+
+Portability requires that the data movement, data analysis, and workflow
+orchstration components be independent of the HPC environment where data
+processing takes place. While some amount of customization is inevitable, we
+improved portability by employing the following
+technologies:
+
+1. Enable data to be "sent everywhere" at short notice.
+2. Build protable containers for the data analysis software. This allows rapdi
+   re-deployment at a new site.
+3. Host workflow orchestration on Kubernetes-based microservices platforms.
+   This minimizes the amount of custom (site-local) pipeline management code.
+
+
+Data Movement
+^^^^^^^^^^^^^
+
+
+Use Portable Containers
+^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Microservices
+^^^^^^^^^^^^^
