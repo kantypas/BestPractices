@@ -30,12 +30,22 @@ The following figure outlines the LCLS + NERSC workflow.
 CCTBX
 -----
 
+.. attention::
+    This section is a WIP
+    TODO: i) describe CCTBX software; ii) CCTBX needs GUI, workflow
+    orchestration DB
+
+
 Data was analyzed using the `Computational Crystallographic Toolbox (CCTBX)
 <https://github.com/cctbx/cctbx_project>`_ 
 
 
 Portability
 -----------
+
+.. attention::
+    This section is WIP
+    TODO: i) add portability "table"
 
 Portability requires that the data movement, data analysis, and workflow
 orchstration components be independent of the HPC environment where data
@@ -49,14 +59,37 @@ technologies:
 3. Host workflow orchestration on Kubernetes-based microservices platforms.
    This minimizes the amount of custom (site-local) pipeline management code.
 
+.. attention::
+    TODO: Add links beween list and sections
+
 
 Data Movement
 ^^^^^^^^^^^^^
+
+.. attention::
+    This section is WIP
+    TODO: i) Describe how datafed solves the problem of accessing data from
+    anywhere
 
 
 Use Portable Containers
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+.. attention::
+    This section is WIP
+    TODO: copy relevant points from links
 
-Microservices
-^^^^^^^^^^^^^
+Instructions for building containers that run on shifter and singularity
+(without rebuilding):
+1. https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter
+2. https://docs.nersc.gov/development/languages/python/parallel-python/#mpi4py
+3. https://www.alcf.anl.gov/support-center/theta/singularity-theta
+
+
+Workflow Orchestration and Microservices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. attentions::
+    This section is WIP
+    TODO: i) add Jason Kincl's noVNC example; ii) add OLCF Slate experiences -- how to make portable Microservices
+
