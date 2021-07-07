@@ -80,21 +80,6 @@ status of the data analysis in real time to a central mySQL data base. This
 allows scientists to follow the complete data analysis from start to finish,
 and make rapid decisions about their experiments.
 
-For experiments conducted at the LCLS light source, we use `psana
-<https://github.com/slac-lcls>`_ to access raw data and orchestrate parallel
-I/O. The LCLS provides a REST API which exposes the state of an experimental
-run (and data transfer) to external facilities. A run can be in one of the
-following states
-
-#. The run is ongoing and data is still being collected into xtc "streams".
-#. The run is completed and data is being transferred.
-#. The run is completed and data has been transferred to NERSC.
-
-*cctbx.xfel* monitors this API from NERSC or from LCLS. If it is running at
-LCLS, then it can commence with data analysis when the API returns state 2. If
-it is running at NERSC, then data the GUI presents the run for analysis only
-once the API returns state 3.
-
 *cctbx.xfel* can compose and submit jobscripts for a variety of job schedulers
 (Slurm, PBS, LFS, and SGE) and CCTBX parameter files. By comparing available
 data, user inputs, and the list of completed jobs (from the mySQL database
@@ -119,6 +104,25 @@ approx 8000 *commit* transactions per second, which Spin is capable of
 accommodating.
 
 
+Cross-Facility Communication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For experiments conducted at the LCLS light source, we use `psana
+<https://github.com/slac-lcls>`_ to access raw data and orchestrate parallel
+I/O. The LCLS provides a REST API which exposes the state of an experimental
+run (and data transfer) to external facilities. A run can be in one of the
+following states
+
+#. The run is ongoing and data is still being collected into xtc "streams".
+#. The run is completed and data is being transferred.
+#. The run is completed and data has been transferred to NERSC.
+
+*cctbx.xfel* monitors this API from NERSC or from LCLS. If it is running at
+LCLS, then it can commence with data analysis when the API returns state 2. If
+it is running at NERSC, then data the GUI presents the run for analysis only
+once the API returns state 3.
+
+
 Facility Requirements
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -137,7 +141,6 @@ Portability
 
 .. attention::
     This section is WIP
-    TODO: i) add portability "table"
 
 Portability requires that the data movement, data analysis, and workflow
 orchstration components be independent of the HPC environment where data
@@ -154,7 +157,10 @@ technologies:
 
 .. figure:: ./assets/cctbx_portability.png
 
-   Portability of the CCTBX Superfacility workflow accross 4 facilties.
+   Portability experiences of the CCTBX Superfacility workflow accross 4
+   facilties: `NERSC <https://www.nersc.gov>`_, `OLCF
+   <https://www.olcf.ornl.gov>`_, `ALCF <https://www.alcf.anl.gov>`_, `LCLS
+   <https://lcls.slac.stanford.edu/>`_
 
 .. attention::
     TODO: Add links beween list and sections
