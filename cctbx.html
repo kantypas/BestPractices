@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Using CCTBX in a Superfacility Workflow &mdash; Cross Facility Workflows 0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example" href="notebooks/example/index.html" />
+    <link rel="prev" title="Identity Management" href="identity_management.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cross Facility Workflows
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_applications.html">Workflow Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facility_api.html">APIs for Facilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="identity_management.html">Identity Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Use cases</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using CCTBX in a Superfacility Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cctbx">CCTBX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipeline-management">Pipeline Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cross-facility-communication">Cross-Facility Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-requirements">Facility Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#portability">Portability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-movement">Data Movement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-portable-containers">Use Portable Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-orchestration-and-microservices">Workflow Orchestration and Microservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/example/index.html">Example</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cross Facility Workflows</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Using CCTBX in a Superfacility Workflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cctbx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="using-cctbx-in-a-superfacility-workflow">
+<h1>Using CCTBX in a Superfacility Workflow<a class="headerlink" href="#using-cctbx-in-a-superfacility-workflow" title="Permalink to this headline">¶</a></h1>
+<p>Realtime data analysis is a powerful tool, enabling rapid descision making
+during experiments. Unlike traditional simulation workloads, fast feedback, and
+automatic data management are central features of this workflow. We therefore
+use a “Superfacility” paradigm to computing, where HPC is a reactive element
+which is tightly coupled to the experiment’s data processing pipeline. <a class="reference external" href="https://arxiv.org/abs/2106.11469">A
+recent publication</a> demonstrates these
+workflows at NERSC. Critical for resiliancy is to enable failover to other
+facilities.</p>
+<p>The following figure outlines the LCLS + NERSC workflow.</p>
+<div class="figure align-default" id="id1">
+<img alt="_images/cctbx_workflow.png" src="_images/cctbx_workflow.png" />
+<p class="caption"><span class="caption-text">Example of the NERSC-LCLS Superfacility workflow. Data is collected at LCLS
+(upper left box) where it is stored on disk. Once an experimental run is
+completed, a XRootD cluster automatically copies all of the files for that
+run to the SCRATCH Lustre file system at NERSC (central arrow – orange
+spikes show instantaneous data transfer rate over ESNet, each spike being
+the data for one run). Once the data for a run has been completely
+transferred to NERSC, the cctbx.xfel pipeline management tool (running on a
+login node, bottom left box) automatically submits data analysis jobs
+(running in shifter containers, bottom right box). The data analysis at
+NERSC are coordinated by a MySQL database hosted on the Spin microservices
+platform (bottom center box).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="cctbx">
+<h2>CCTBX<a class="headerlink" href="#cctbx" title="Permalink to this headline">¶</a></h2>
+<p>Data was analyzed using the <a class="reference external" href="https://github.com/cctbx/cctbx_project">Computational Crystallographic Toolbox (CCTBX)</a>. CCTBX is a software framework to
+perform serial crystallographic data analysis on high-performance computing
+systems. Data analysis involves processing anywhere between hundreds of
+thousands to millions of images. These are stored as arrays of pixel intensity
+values. Here we focus on a subset of features and algorithms – called
+<em>cctbx.xfel</em> – which specialize in SFX experimental data analysis. The result
+of data processing is a list of features (such a Bragg spot shape, and Miller
+indices) derived from the input data set, as well as refined experimental
+parameters (such as detector position and orientation relative to the beam).</p>
+<p><em>cctbx.xfel</em> is a python package which is designed to interface with other SFX
+data analysis workflows, such as <a class="reference external" href="https://dials.github.io/">DAILS</a>. This
+makes it highly versatile, and allows non-software specialists to implement
+data analysis algorithms. Furthermore, most experimental facilities provide
+custom software packages to interface with facility data collection and
+logging. These packages almost always provide a Python API. Therefore the data
+analysis coordinated and scripted using Python</p>
+<p>The computationally intensive work is implemented in C++, and recent work makes
+use of CUDA and <a class="reference external" href="https://github.com/kokkos/kokkos">Kokkos</a> for some of the
+most computationally expensive algorithms. <em>cctbx.xfel</em> makes use of a
+producer/consumer model to distribute parallel work over MPI ranks. openMP is
+enabled for single-rank parallelism.</p>
+<div class="section" id="pipeline-management">
+<h3>Pipeline Management<a class="headerlink" href="#pipeline-management" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>EFEL data analysis requires interactive pipeline management tools in order
+to effectively provide fast feedback to experiment operators.</p>
+</div>
+<p><em>cctbx.xfel</em> provides a complete pipeline management systems in the form of a
+graphical user interface. Either by monitoring a directory for new data, or by
+using the experimental facility’s API (if one exists) <em>cctbx.xfel</em>
+automatically detects new data (grouped into “runs”). The user can choose to
+tag these experimental runs with scientifically-relevant tags, similar to a log
+book. Runs are grouped into “trials”, which share the same parameters for data
+analysis. <em>cctbx.xfel</em> automatically detects unprocessed trials (either because
+new data has come in, or the user submitted new data analysis parameters), and
+submits new job scripts. As the data processing jobs run, they report the
+status of the data analysis in real time to a central mySQL data base. This
+allows scientists to follow the complete data analysis from start to finish,
+and make rapid decisions about their experiments.</p>
+<p><em>cctbx.xfel</em> can compose and submit jobscripts for a variety of job schedulers
+(Slurm, PBS, LFS, and SGE) and CCTBX parameter files. By comparing available
+data, user inputs, and the list of completed jobs (from the mySQL database
+described below) new jobs can be automatically submitted. E.g. when new data
+files have finished transferring, or if the users modify the analysis
+parameters. Once data analysis parameters have been broadcast to all MPI ranks,
+data processing occurs independently for each image until the final step. Since
+each image can be very different (and often doesn’t contain the same features),
+the per-image data processing time can vary vastly.  Hence, in order to remain
+load-balanced between MPI ranks, we employ producer/consumer parallelism.</p>
+<p>In order to coordinate data analysis among different users and Slurm jobs, each
+<em>cctbx.xfel</em> instance running on the compute nodes connects to a MySQL
+database, and “reports” the images it is analyzing together with analysis
+parameters and outcomes (e.g. successful spot finding). This allows instant
+feedback on the outcomes of the data analysis amongst many users at once.
+Therefore the database needs to be able to accept potentially thousands of
+connections at once. We find that a MySQL database instance hosted on NERSC’s
+“Spin” micro-services platform is capable of accommodating the required rate
+of database transactions. In past experiments, we observed a peak peak of
+approx 8000 <em>commit</em> transactions per second, which Spin is capable of
+accommodating.</p>
+</div>
+<div class="section" id="cross-facility-communication">
+<h3>Cross-Facility Communication<a class="headerlink" href="#cross-facility-communication" title="Permalink to this headline">¶</a></h3>
+<p>For experiments conducted at the LCLS light source, we use <a class="reference external" href="https://github.com/slac-lcls">psana</a> to access raw data and orchestrate parallel
+I/O. The LCLS provides a REST API which exposes the state of an experimental
+run (and data transfer) to external facilities. A run can be in one of the
+following states</p>
+<ol class="arabic simple">
+<li><p>The run is ongoing and data is still being collected into xtc “streams”.</p></li>
+<li><p>The run is completed and data is being transferred.</p></li>
+<li><p>The run is completed and data has been transferred to NERSC.</p></li>
+</ol>
+<p><em>cctbx.xfel</em> monitors this API from NERSC or from LCLS. If it is running at
+LCLS, then it can commence with data analysis when the API returns state 2. If
+it is running at NERSC, then data the GUI presents the run for analysis only
+once the API returns state 3.</p>
+</div>
+<div class="section" id="facility-requirements">
+<h3>Facility Requirements<a class="headerlink" href="#facility-requirements" title="Permalink to this headline">¶</a></h3>
+<p>When running at on a supercomputer, this workflow requires three types of nodes:</p>
+<ul class="simple">
+<li><p>Many (64 and more) compute nodes: run the computationally-intensive data
+analysis tasks (image processing and data reduction).</p></li>
+<li><p>One workflow coordinate node: hosts database of done and new work, as well as
+workflow statistics – this is fairly light weight, just needs to be scalable
+and have a fast network connection to the compute nodes.</p></li>
+<li><p>Pipeline management nodes: run the GUI which is used by the science teams –
+more often than not, this will just be a login node.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="portability">
+<h2>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This section is WIP</p>
+</div>
+<p>Portability requires that the data movement, data analysis, and workflow
+orchstration components be independent of the HPC environment where data
+processing takes place. While some amount of customization is inevitable, we
+improved portability by employing the following
+technologies:</p>
+<ol class="arabic simple">
+<li><p>Enable data to be “sent everywhere” at short notice.</p></li>
+<li><p>Build protable containers for the data analysis software. This allows rapdi
+re-deployment at a new site.</p></li>
+<li><p>Host workflow orchestration on Kubernetes-based microservices platforms.
+This minimizes the amount of custom (site-local) pipeline management code.</p></li>
+</ol>
+<div class="figure align-default" id="id2">
+<img alt="_images/cctbx_portability.png" src="_images/cctbx_portability.png" />
+<p class="caption"><span class="caption-text">Portability experiences of the CCTBX Superfacility workflow accross 4
+facilties: <a class="reference external" href="https://www.nersc.gov">NERSC</a>, <a class="reference external" href="https://www.olcf.ornl.gov">OLCF</a>, <a class="reference external" href="https://www.alcf.anl.gov">ALCF</a>, <a class="reference external" href="https://lcls.slac.stanford.edu/">LCLS</a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>TODO: Add links beween list and sections</p>
+</div>
+<div class="section" id="data-movement">
+<h3>Data Movement<a class="headerlink" href="#data-movement" title="Permalink to this headline">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This section is WIP
+TODO: i) Describe how datafed solves the problem of accessing data from
+anywhere</p>
+</div>
+</div>
+<div class="section" id="use-portable-containers">
+<h3>Use Portable Containers<a class="headerlink" href="#use-portable-containers" title="Permalink to this headline">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This section is WIP
+TODO: copy relevant points from links</p>
+</div>
+<p>Instructions for building containers that run on shifter and singularity
+(without rebuilding):</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter">https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter</a></p></li>
+<li><p><a class="reference external" href="https://docs.nersc.gov/development/languages/python/parallel-python/#mpi4py">https://docs.nersc.gov/development/languages/python/parallel-python/#mpi4py</a></p></li>
+<li><p><a class="reference external" href="https://www.alcf.anl.gov/support-center/theta/singularity-theta">https://www.alcf.anl.gov/support-center/theta/singularity-theta</a></p></li>
+</ol>
+</div>
+<div class="section" id="workflow-orchestration-and-microservices">
+<h3>Workflow Orchestration and Microservices<a class="headerlink" href="#workflow-orchestration-and-microservices" title="Permalink to this headline">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This section is WIP
+TODO: i) add Jason Kincl’s noVNC example; ii) add OLCF Slate experiences – how to make portable Microservices</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="notebooks/example/index.html" class="btn btn-neutral float-right" title="Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="identity_management.html" class="btn btn-neutral float-left" title="Identity Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ALCF, OLCF, NERSC.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
