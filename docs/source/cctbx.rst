@@ -30,10 +30,6 @@ The following figure outlines the LCLS + NERSC workflow.
 CCTBX
 -----
 
-.. attention::
-    This section is a WIP
-
-
 Data was analyzed using the `Computational Crystallographic Toolbox (CCTBX)
 <https://github.com/cctbx/cctbx_project>`_. CCTBX is a software framework to
 perform serial crystallographic data analysis on high-performance computing
@@ -136,6 +132,7 @@ When running at on a supercomputer, this workflow requires three types of nodes:
 * Pipeline management nodes: run the GUI which is used by the science teams --
   more often than not, this will just be a login node.
 
+
 Portability
 -----------
 
@@ -184,6 +181,7 @@ Use Portable Containers
 
 Instructions for building containers that run on shifter and singularity
 (without rebuilding):
+
 1. https://docs.nersc.gov/development/shifter/how-to-use/#using-mpi-in-shifter
 2. https://docs.nersc.gov/development/languages/python/parallel-python/#mpi4py
 3. https://www.alcf.anl.gov/support-center/theta/singularity-theta
