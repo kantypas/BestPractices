@@ -11,11 +11,16 @@ We also provide guidance on what storage endpoints are available across the ASCR
 Globus
 -------
 
+Globus is a service for scheduling data transfers between sites, filling a particular niche among users of large datasets at the DOE copmuting facilities (and elsewhere). Instead of synchronously transferring files, users schedule transfers to take place, and the Globus service manages the transfer, recovering as needed from failures, and notifying the user when the transfer completes. In addition to this convenient reliability, transfers over Globus are typically very performant, whether the user is transferring a few very large files, or a large collection of very small files.
+
 ALCF
 ~~~~~~
-https://www.alcf.anl.gov/support-center/theta/using-globus-theta
 
-https://www.alcf.anl.gov/support-center/cooley/globus-cooley
+Users at the ALCF can leverage multiple Globus endpoints for their data transfers
+
+- Theta (alcf#dtn_theta) endpoint, for transfers to all filesystems at ALCF.
+- Eagle (alcf#dtn_eagle) endpoint, for transfers to the Eagle filesystem in particular. Eagle is a 100PB filesystem with additional data sharing functionality exposed through Globus. For more information about Globus sharing using Eagle, see the `related documentation <https://alcf.anl.gov/support-center/theta-and-thetagpu/eagle-data-sharing>`_.
+- HPSS (alcf#dtn_hpss) endpoint, a Globus endpoint for accessing the ALCF tape archive.
 
 
 NERSC

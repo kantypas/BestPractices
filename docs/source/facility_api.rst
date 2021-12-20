@@ -8,6 +8,10 @@ multiple facilities.
 
     Under construction
 
+ALCF
+~~~~
+ALCF has traditionally developed the Cobalt scheduler for its systems, opening the opportunity to also expose aspects of the scheduler via a programmable API. This work is underway as part of scheduler development in preparation for the Aurora system.
+
 NERSC
 ~~~~~
 NERSC is developing the `SuperFacility API <https://docs-dev.nersc.gov/sfapi/>`_
