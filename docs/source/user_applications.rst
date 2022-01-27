@@ -1,5 +1,5 @@
 User Services
-================
+===============
 
 This page documents infrastructure available at each site to support
 user-managed applications such as data portals, science gateways, workflow managers,
