@@ -19,6 +19,7 @@ Jump to our `GitHub project page <https://github.com/CrossFacilityWorkflows/Cros
    containers
    user_applications
    facility_api
+   workflows
    identity_management
 
 .. toctree::
